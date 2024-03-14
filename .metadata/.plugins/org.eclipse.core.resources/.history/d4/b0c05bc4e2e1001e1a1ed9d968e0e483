@@ -1,0 +1,9 @@
+package es.iesjandula.coches;
+
+public class Coche {
+
+	private String modelo;
+	private String marca;
+	
+	private String kilometros;
+}

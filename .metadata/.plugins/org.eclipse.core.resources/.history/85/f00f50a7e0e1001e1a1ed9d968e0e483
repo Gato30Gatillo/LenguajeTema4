@@ -1,0 +1,7 @@
+package es.iesjandula.coches;
+
+public class Motor {
+	private int caballos;
+	private String tipo;
+}
+

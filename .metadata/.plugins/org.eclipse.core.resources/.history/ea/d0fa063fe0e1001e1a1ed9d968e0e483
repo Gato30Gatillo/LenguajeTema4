@@ -1,0 +1,5 @@
+package es.iesjandula.coches;
+
+public class Coche {
+
+}

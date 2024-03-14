@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\1DAM\Desktop\Lenguaje de marcas\lenguaje\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1828040162.index
+2871104390.index
