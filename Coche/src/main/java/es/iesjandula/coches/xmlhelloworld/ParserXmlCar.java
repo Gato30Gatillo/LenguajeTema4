@@ -26,25 +26,35 @@ public class ParserXmlCar
 			DocumentBuilder documentBuilder= documentBuilderFactory.newDocumentBuilder();
 			Document document= documentBuilder.parse(new File("car.xml"));
 			Element rootElement= document.getDocumentElement();
-			NodeList nodeListCar = rootElement.getElementsByTagName("Coche");
-			Element nodeCar= (Element) nodeListCar.item(0);
-			String marca= nodeCar.getElementsByTagName("marca").item(0).getTextContent();
-			String modelo= nodeCar.getElementsByTagName("modelo").item(0).getTextContent();
-			String puertas = nodeCar.getElementsByTagName("puertas").item(0).getTextContent();
-			String kilometros= nodeCar.getElementsByTagName("kilometros").item(0).getTextContent();
+			NodeList nodeListCar = rootElement.getElementsByTagName("coche");
 			
-			System.out.println("Marca: " + marca +", modelo: " + modelo
-					+", puertas: " + puertas +", kilometros: " + kilometros);
-			
-			NodeList nodeListMotor= nodeCar.getElementsByTagName("motor");
-			
-			Element nodeMotor= (Element) nodeListMotor.item(0);
-			
-			String revoluciones= nodeMotor.getElementsByTagName("revoluciones").item(0).getTextContent();
-			String tipo= nodeMotor.getElementsByTagName("tipo").item(0).getTextContent();
-			
-			System.out.println("Motor-> Revoluciones: " + revoluciones+", tipo: "+tipo);
-			
+			for(int i=0; i<nodeListCar.getLength();i++) 
+			{
+				System.out.println("Coche "+ i);
+				String marca="";
+				Element nodeCar= (Element) nodeListCar.item(i);
+				for(int j=0;j<nodeCar.getElementsByTagName("marca").getLength();j++)
+				{
+				marca += nodeCar.getElementsByTagName("marca").item(j).getTextContent()+", ";
+				}
+				String modelo= nodeCar.getElementsByTagName("modelo").item(0).getTextContent();
+				String puertas = nodeCar.getElementsByTagName("puertas").item(0).getTextContent();
+				String kilometros= nodeCar.getElementsByTagName("kilometros").item(0).getTextContent();
+				
+				System.out.println("Marcas: " + marca +" modelo: " + modelo
+						+", puertas: " + puertas +", kilometros: " + kilometros);
+				
+				NodeList nodeListMotor= nodeCar.getElementsByTagName("motor");
+				for(int j=0; j<nodeListMotor.getLength();j++) 
+				{
+					Element nodeMotor= (Element) nodeListMotor.item(j);
+					
+					String revoluciones= nodeMotor.getElementsByTagName("revoluciones").item(0).getTextContent();
+					String tipo= nodeMotor.getElementsByTagName("tipo").item(0).getTextContent();
+					
+					System.out.println("Motor "+j+"-> Revoluciones: " + revoluciones+", tipo: "+tipo);
+				}
+			}
 		} catch(ParserConfigurationException xmlException) 
 		{
 			xmlException.printStackTrace();

@@ -1,0 +1,15 @@
+
+g
+java:S2755C"3Disable access to external entities in XML parsing.b 70a3a685aab42455b70a3ea947622a18h
+x
+java:S21479"DCombine this catch with the one at line 53, which has the same body.b 8532ee58b6b11465a3ce38917c6d71cdh
+z
+java:S1854)"?Remove this useless assignment to local variable "nodeListCar".8ΜΎέε1b f4bba7ff83dd21d4395e397764fabd1dh
+
+java:S21475"DCombine this catch with the one at line 49, which has the same body.8ΜΎέε1b 41084fbbc2d17dda6f9c3cc1f4df2734h
+k
+java:S1481)"0Remove this unused "nodeListCar" local variable.8ΜΎέε1b fa33d113b7be6b164edc69e9b5ae0d92h
+d
+java:S1128")Remove this unused import 'java.io.File'.8ΜΎέε1b e8db65113c8c1ea42554352892db1143h
+p
+java:S1128"5Remove this unused import 'org.xml.sax.SAXException'.8ΜΎέε1b 858e941bc21f49fae12a0f3166c053f5h

@@ -1,0 +1,12 @@
+
+x
+java:S2147>"DCombine this catch with the one at line 58, which has the same body.b 9fd5406df99dfd41dae53b26f36c6995h
+x
+java:S2147B"DCombine this catch with the one at line 62, which has the same body.b 8532ee58b6b11465a3ce38917c6d71cdh
+^	java:S106!"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+^	java:S106,"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+n
+java:S2755"3Disable access to external entities in XML parsing.8‘ðöÙå1b 70a3a685aab42455b70a3ea947622a18h
+W
+java:S1643&"Use a StringBuilder instead.8¸É¦Úå1b a9412f8dc03b7d4df1438c489cd2d25ch
+e	java:S1067"+Replace this use of System.out by a logger.8¦òØÚå1b bb1c3f2ea781263d3a2bb92b06a2061fh

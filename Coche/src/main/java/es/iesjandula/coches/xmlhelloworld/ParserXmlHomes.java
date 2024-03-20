@@ -31,7 +31,7 @@ public class ParserXmlHomes
 			for(int i=0; i<nodeListHome.getLength();i++) 
 			{
 			
-			Element nodeHome= (Element) nodeListHome.item(0);
+			Element nodeHome= (Element) nodeListHome.item(i);
 			String ciudad= nodeHome.getAttributes().getNamedItem("ciudad").getTextContent();
 			String tipo= nodeHome.getAttributes().getNamedItem("tipo").getTextContent();
 			int metrosCuadrados= Integer.valueOf(nodeHome.getAttributes().getNamedItem("metrosCuadrados").getTextContent());

@@ -1,0 +1,16 @@
+
+g
+java:S2755"3Disable access to external entities in XML parsing.b 70a3a685aab42455b70a3ea947622a18h
+x
+java:S21473"DCombine this catch with the one at line 47, which has the same body.b 9fd5406df99dfd41dae53b26f36c6995h
+x
+java:S21477"DCombine this catch with the one at line 51, which has the same body.b 8532ee58b6b11465a3ce38917c6d71cdh
+m
+java:S2130%"9Use "Integer.parseInt" for this string-to-int conversion.b 994a06e79961132d68e9cc37339093deh
+m
+java:S2130&"9Use "Integer.parseInt" for this string-to-int conversion.b 3283d6ac022081060d448abe144e10e2h
+m
+java:S2130'"9Use "Integer.parseInt" for this string-to-int conversion.b b941a1b602632384e8594060ea5c838ch
+u
+java:S2130("AUse "Boolean.parseBoolean" for this string-to-boolean conversion.b e1720d6d49041a950e78ca661eb90c43h
+^	java:S106*"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh

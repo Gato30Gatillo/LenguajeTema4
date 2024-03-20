@@ -1,9 +1,9 @@
 
-e	java:S106"+Replace this use of System.out by a logger.8¨”γγ1b bb1c3f2ea781263d3a2bb92b06a2061fh
-e	java:S106"+Replace this use of System.out by a logger.8¨”γγ1b bb1c3f2ea781263d3a2bb92b06a2061fh
 n
 java:S2755"3Disable access to external entities in XML parsing.8»γγ1b 70a3a685aab42455b70a3ea947622a18h
-
-java:S2147$"DCombine this catch with the one at line 32, which has the same body.8ÒΏγγ1b 9fd5406df99dfd41dae53b26f36c6995h
+e	java:S106"+Replace this use of System.out by a logger.8¨”γγ1b bb1c3f2ea781263d3a2bb92b06a2061fh
 
 java:S2147("DCombine this catch with the one at line 36, which has the same body.8ÒΏγγ1b 8532ee58b6b11465a3ce38917c6d71cdh
+e	java:S106"+Replace this use of System.out by a logger.8¨”γγ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+
+java:S2147$"DCombine this catch with the one at line 32, which has the same body.8ÒΏγγ1b 9fd5406df99dfd41dae53b26f36c6995h
