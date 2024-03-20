@@ -1,0 +1,84 @@
+package es.iesjandula.coches.xmlhelloworld;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import es.iesjandula.coches.Alumno;
+
+public class prueba 
+{
+
+	public static void main(String[] args) throws SAXException 
+	{
+		
+		DocumentBuilderFactory documentBuilderFactory= DocumentBuilderFactory.newInstance();
+		
+		try 
+		{
+		
+			
+			DocumentBuilder documentBuilder= documentBuilderFactory.newDocumentBuilder();
+			
+			Document document= documentBuilder.parse(new File("alumnos.xml"));
+						
+			Element rootElement= document.getDocumentElement();
+			
+			NodeList nodeListAlumnos = rootElement.getElementsByTagName("alumno");
+			
+			Alumno[] alumno=new Alumno[nodeListAlumnos.getLength()];
+			
+			
+			
+			for(int i=0; i<nodeListAlumnos.getLength();i++) 
+			{
+				Element nodeAlumno= (Element) nodeListAlumnos.item(i);
+				String nombre= nodeAlumno.getAttributes().getNamedItem("nombre").getTextContent();
+				int edad = Integer.valueOf(nodeAlumno.getAttributes().getNamedItem("edad").getTextContent());
+				double calificacion= Double.valueOf(nodeAlumno.getElementsByTagName("calificacion").item(0).getTextContent());
+				boolean unidadesPendientes= Boolean.valueOf(nodeAlumno.getElementsByTagName("unidadesPendientes").item(0).getTextContent());
+				alumno[i].setNombre(nombre);
+				alumno[i].setEdad(edad);
+				alumno[i].setCalificacion(calificacion);
+				alumno[i].setAsignaturasPendientes(unidadesPendientes);
+			}
+			for(int i=0; i<alumno.length;i++) {
+				System.out.println("Alumno "+ i+": "+" nombre: " + alumno[i].getNombre() +", edad: " + alumno[i].getEdad() +", calificacion: " 
+			+ alumno[i].getCalificacion() +", unidadesPendientes: " + alumno[i].isAsignaturasPendientes());
+				
+			
+			}
+			
+		} catch(ParserConfigurationException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		catch(SAXException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		catch(IOException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		
+		
+		
+	}
+
+}

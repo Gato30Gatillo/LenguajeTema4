@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<coches>
+	<coche>
+		<marca>Volkswagen</marca>
+		<marca>pigasus</marca>
+		<modelo>Polo</modelo>
+		<motor>
+			<revoluciones>1500</revoluciones>
+			<tipo>diesel</tipo>
+		</motor>
+		<motor>
+			<revoluciones>2500</revoluciones>
+			<tipo>diosel</tipo>
+		</motor>
+		<puertas>5</puertas>
+		<kilometros>200000</kilometros>
+	</coche>
+	
+	<coche>
+		<marca>Ford</marca>
+		<marca>Pegasus</marca>
+		<modelo>Focus</modelo>
+		<motor>
+			<revoluciones>510</revoluciones>
+			<tipo>gasoil</tipo>
+		</motor>
+		<puertas>8</puertas>
+		<kilometros>15020</kilometros>
+	</coche>
+	
+	<coche>
+		<marca>Hyunday</marca>
+		<modelo>Alfa</modelo>
+		<motor>
+			<revoluciones>20</revoluciones>
+			<tipo>gasolina</tipo>
+		</motor>
+		<puertas>1</puertas>
+		<kilometros>100</kilometros>
+	</coche>
+</coches>

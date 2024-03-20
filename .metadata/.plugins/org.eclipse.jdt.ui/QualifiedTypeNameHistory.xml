@@ -13,4 +13,7 @@
     <fullyQualifiedTypeName name="javax.xml.transform.stream.StreamResult"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="javax.xml.transform.TransformerException"/>
+    <fullyQualifiedTypeName name="es.iesjandula.coches.Coche"/>
+    <fullyQualifiedTypeName name="javax.xml.transform.OutputKeys"/>
+    <fullyQualifiedTypeName name="es.iesjandula.coches.Alumno"/>
 </qualifiedTypeNameHistroy>

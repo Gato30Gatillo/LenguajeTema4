@@ -1,0 +1,86 @@
+package es.iesjandula.coches.xmlhelloworld;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class ConvertAlumnosToXml 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		DocumentBuilderFactory documentBuilderFactory= DocumentBuilderFactory.newInstance();
+		
+		try 
+		{
+		
+			
+			DocumentBuilder documentBuilder= documentBuilderFactory.newDocumentBuilder();
+			
+			FileOutputStream output= new FileOutputStream("salida-alumnos.txt");
+
+			Document document= documentBuilder.newDocument();
+			
+			Element rootElement= document.createElement("alumnos");
+			
+			NodeList nodeListAlumnos = rootElement.getElementsByTagName("alumno");
+			
+			for(int i=0; i<nodeListAlumnos.getLength();i++) 
+			{
+				Element nodeAlumno= (Element) nodeListAlumnos.item(i);
+				String nombre= nodeAlumno.getElementsByTagName("nombre").item(0).getTextContent();
+				int edad = Integer.valueOf(nodeAlumno.getElementsByTagName("edad").item(0).getTextContent());
+				int calificacion= Integer.valueOf(nodeAlumno.getElementsByTagName("calificacion").item(0).getTextContent());
+				boolean unidadesPendientes= Boolean.valueOf(nodeAlumno.getElementsByTagName("unidadesPendientes").item(0).getTextContent());
+				
+				rootElement.setTextContent("Alumno "+ i+": "+" nombre: " + nombre +", edad: " + edad +", calificacion: " + calificacion
+						+", unidadesPendientes: " + unidadesPendientes);
+			}
+			
+			document.appendChild(rootElement);
+			
+			writeXml(document,output);
+			
+		} catch(ParserConfigurationException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		catch(TransformerException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		catch(IOException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		
+		
+	}
+	
+	public static void writeXml(Document document, OutputStream output) throws TransformerException
+	{
+		TransformerFactory transformerFactory= TransformerFactory.newInstance();
+		Transformer transformer= transformerFactory.newTransformer();
+		DOMSource xmlAsObject= new DOMSource(document);
+		StreamResult xmlAsFile=new StreamResult(output);
+		transformer.transform(xmlAsObject, xmlAsFile);
+		
+	}
+
+}

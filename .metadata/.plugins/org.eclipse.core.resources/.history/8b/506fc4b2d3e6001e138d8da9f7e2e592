@@ -1,0 +1,93 @@
+package es.iesjandula.coches.xmlhelloworld;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class ConvertAlumnosToXml 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		DocumentBuilderFactory documentBuilderFactory= DocumentBuilderFactory.newInstance();
+		
+		try 
+		{
+		
+			
+			DocumentBuilder documentBuilder= documentBuilderFactory.newDocumentBuilder();
+			
+			FileOutputStream output= new FileOutputStream("salida-alumnos.txt");
+
+			Document document= documentBuilder.newDocument();
+			
+			for(int i=0; i<nodeListAlumnos.getLength();i++) 
+			{
+				System.out.println("Coche "+ i);
+				String marca="";
+				Element nodeCar= (Element) nodeListAlumnos.item(i);
+				for(int j=0;j<nodeCar.getElementsByTagName("marca").getLength();j++)
+				{
+				marca += nodeCar.getElementsByTagName("marca").item(j).getTextContent()+", ";
+				}
+				String modelo= nodeCar.getElementsByTagName("modelo").item(0).getTextContent();
+				String puertas = nodeCar.getElementsByTagName("puertas").item(0).getTextContent();
+				String kilometros= nodeCar.getElementsByTagName("kilometros").item(0).getTextContent();
+				
+				System.out.println("Marcas: " + marca +" modelo: " + modelo
+						+", puertas: " + puertas +", kilometros: " + kilometros);
+			}
+			
+			Element rootElement= document.createElement("mi_etiqueta_raiz");
+			
+			NodeList nodeListCar = rootElement.getElementsByTagName("coche");
+			
+			rootElement.setTextContent("Hola mundo!");
+			
+			document.appendChild(rootElement);
+			
+			writeXml(document,output);
+			
+		} catch(ParserConfigurationException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		catch(TransformerException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		catch(IOException xmlException) 
+		{
+			xmlException.printStackTrace();
+		}
+		
+		
+	}
+	
+	public static void writeXml(Document document, OutputStream output) throws TransformerException
+	{
+		TransformerFactory transformerFactory= TransformerFactory.newInstance();
+		Transformer transformer= transformerFactory.newTransformer();
+		DOMSource xmlAsObject= new DOMSource(document);
+		StreamResult xmlAsFile=new StreamResult(output);
+		transformer.transform(xmlAsObject, xmlAsFile);
+		
+	}
+
+}

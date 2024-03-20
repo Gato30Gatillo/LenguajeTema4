@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><alumnos>
+	<alumno edad="20" nombre="Fulanito">
+		<calificacion>8.5</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="21" nombre="Menganito">
+		<calificacion>7.4</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="19" nombre="Zutanito">
+		<calificacion>6.9</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+		<alumno edad="24" nombre="Alfredo">
+		<calificacion>8</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="23" nombre="Mengamind">
+		<calificacion>7</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="19" nombre="lori">
+		<calificacion>6</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+		<alumno edad="20" nombre="Pedro">
+		<calificacion>4.5</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="21" nombre="Clara">
+		<calificacion>7.6</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="19" nombre="Jaime">
+		<calificacion>3.9</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+		<alumno edad="20" nombre="Carlos">
+		<calificacion>2.5</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="21" nombre="Malfred">
+		<calificacion>1.4</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="19" nombre="Tito">
+		<calificacion>0.9</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+		<alumno edad="20" nombre="Paco">
+		<calificacion>4.9</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="21" nombre="Crok">
+		<calificacion>5.5</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="19" nombre="Pablo">
+		<calificacion>8.42</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+		<alumno edad="20" nombre="Vinicius">
+		<calificacion>5.56</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="21" nombre="Dioniso">
+		<calificacion>7.45</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="19" nombre="peoritario">
+		<calificacion>2.93</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+	<alumno edad="100" nombre="Teo">
+		<calificacion>10</calificacion><unidadesPendientes>true</unidadesPendientes>
+	</alumno>
+	<alumno edad="125" nombre="Jesus">
+		<calificacion>11</calificacion><unidadesPendientes>false</unidadesPendientes>
+	</alumno>
+</alumnos><alumnos/>
