@@ -1,6 +1,8 @@
 package es.iesjandula.coches;
 
-public class Alumno {
+import java.util.Comparator;
+
+public class Alumno implements Comparable<Alumno> {
 
 	private String nombre;
 	private int edad;
@@ -36,5 +38,16 @@ public class Alumno {
 	}
 	public void setAsignaturasPendientes(boolean asignaturasPendientes) {
 		AsignaturasPendientes = asignaturasPendientes;
+	}
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", edad=" + edad + ", calificacion=" + calificacion
+				+ ", AsignaturasPendientes=" + AsignaturasPendientes + "]";
+	}
+	
+	@Override
+	public int compareTo(Alumno o) {
+		// TODO Auto-generated method stub
+		return this.nombre.compareTo(o.getNombre());
 	}
 }

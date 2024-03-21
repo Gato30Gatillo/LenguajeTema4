@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Arrays;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -23,83 +24,141 @@ import es.iesjandula.coches.Alumno;
 
 public class ConvertAlumnosToXml 
 {
-
-	public static void main(String[] args) throws SAXException 
+	public static void main(String[] args) 
 	{
-		
-		DocumentBuilderFactory documentBuilderFactory= DocumentBuilderFactory.newInstance();
-		
+		// Create a new factory of documents builder
+		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+			
 		try 
 		{
-		
+
+			// Create a new instance of document builder
+			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+	
+			// Parse and store the XML in the instance of Document
+			Document document = documentBuilder.parse(new File("alumnos.xml"));
 			
-			DocumentBuilder documentBuilder= documentBuilderFactory.newDocumentBuilder();
+			Document document2 = documentBuilder.newDocument();
+			FileOutputStream output = new FileOutputStream("salida-alumnos.txt");
+	
+			// This rootElement is ... alumnos
+				
+			Element rootElement = document.getDocumentElement();
+				
+				
+				
 			
-			Document document= documentBuilder.parse(new File("alumnos.xml"));
-			
-			FileOutputStream output= new FileOutputStream("salida-alumnos.txt");
-			
-			Element rootElement= document.createElement("alumnos");
-			
+			// Get the list of "alumno"
 			NodeList nodeListAlumnos = rootElement.getElementsByTagName("alumno");
 			
-			Alumno[] alumno=new Alumno[nodeListAlumnos.getLength()];
+			String textoFinal = "";
 			
+			Alumno[] alumnos = new Alumno[nodeListAlumnos.getLength()];
 			
+			int notaAlta=-1;
+			int notaAltaPosicion=0;
+			int notaBaja=11;
+			int notaBajaPosicion=0;
+			double media=0;
+			double notaMedia=0;
 			
-			for(int i=0; i<nodeListAlumnos.getLength();i++) 
-			{
-				Element nodeAlumno= (Element) nodeListAlumnos.item(i);
-				String nombre= nodeAlumno.getAttributes().getNamedItem("nombre").getTextContent();
-				int edad = Integer.valueOf(nodeAlumno.getAttributes().getNamedItem("nombre").getTextContent());
-				double calificacion= Double.valueOf(nodeAlumno.getElementsByTagName("calificacion").item(0).getTextContent());
-				boolean unidadesPendientes= Boolean.valueOf(nodeAlumno.getElementsByTagName("unidadesPendientes").item(0).getTextContent());
-				alumno[i].setNombre(nombre);
-				alumno[i].setEdad(edad);
-				alumno[i].setCalificacion(calificacion);
-				alumno[i].setAsignaturasPendientes(unidadesPendientes);
+			for (int i = 0; i < nodeListAlumnos.getLength(); i++) {
+				// Get the first element of the list
+				Element nodeAlumno = (Element) nodeListAlumnos.item(i);
+
+				// Get text from node values
+				String nombre = String.valueOf(nodeAlumno.getAttributes().getNamedItem("nombre").getTextContent());
+				int edad = Integer.valueOf(nodeAlumno.getAttributes().getNamedItem("edad").getTextContent());
+				Double calificacion = Double
+						.valueOf(nodeAlumno.getElementsByTagName("calificacion").item(0).getTextContent());
+				boolean unidadesPendientes = Boolean
+						.parseBoolean(nodeAlumno.getElementsByTagName("unidadesPendientes").item(0).getTextContent());
+				alumnos[i] = new Alumno(nombre, edad, calificacion, unidadesPendientes);
+				System.out.println("nombre: " + nombre + ", edad: " + edad + ", calificacion: " + calificacion
+						+ ", unidadesPendientes" + unidadesPendientes);
+				notaMedia+=calificacion;
+				media+=edad;
 				
-				if(!alumno[i].isAsignaturasPendientes()) {
-				rootElement.setTextContent("Alumno "+ i+": "+" nombre: " + nombre +", edad: " + edad +", calificacion: " + calificacion
-						+", unidadesPendientes: " + unidadesPendientes);
-				System.out.println("Alumno "+ i+": "+" nombre: " + nombre +", edad: " + edad +", calificacion: " + calificacion
-						+", unidadesPendientes: " + unidadesPendientes);
+				}
+			Arrays.sort(alumnos);
+			for (int i = 0; i < alumnos.length; i++) 
+			{
+
+				for (int j = i + 1; j < alumnos.length; j++) 
+				{
+
+					if (alumnos[i].getNombre().compareTo(alumnos[j].getNombre()) > 0) 
+					{
+
+						Alumno temp = alumnos[i];
+						alumnos[i] = alumnos[j];
+						alumnos[j] = temp;
+					}
+				}
+				if(alumnos[i].getCalificacion()>notaAlta) 
+				{
+					notaAltaPosicion=i;
+					notaAlta=(int) alumnos[i].getCalificacion();
+				}
+				
+				if(alumnos[i].getCalificacion()<notaBaja) 
+				{
+					notaBajaPosicion=i;
+					notaBaja=(int) alumnos[i].getCalificacion();
+				}
+
+			}
+			
+			for (int i = 0; i < alumnos.length; i++) 
+			{
+				if (!alumnos[i].isAsignaturasPendientes()) 
+				{
+					textoFinal += alumnos[i].toString() + "\n";
+					System.out.println("Alumno "+ i+": "+" nombre: " + alumnos[i].getNombre() +", edad: " + alumnos[i].getEdad() +", calificacion: " 
+							+ alumnos[i].getCalificacion() +", unidadesPendientes: " + alumnos[i].isAsignaturasPendientes());
+								
 				}
 			}
-			for(int i=0; i<alumno.length;i++) {
-				System.out.println("Alumno "+ i+": "+" nombre: " + alumno[i].getNombre() +", edad: " + alumno[i].getEdad() +", calificacion: " 
-			+ alumno[i].getCalificacion() +", unidadesPendientes: " + alumno[i].isAsignaturasPendientes());
-				
-			}
-			
-			document.appendChild(rootElement);
-			
-			writeXml(document,output);
-			
-		} catch(ParserConfigurationException xmlException) 
-		{
-			xmlException.printStackTrace();
+			System.out.println("Alumno con nota mas alta "+"Alumno "+ notaAltaPosicion+": "+" nombre: " + alumnos[notaAltaPosicion].getNombre() +", edad: " + alumnos[notaAltaPosicion].getEdad() +", calificacion: " 
+					+ alumnos[notaAltaPosicion].getCalificacion() +", unidadesPendientes: " + alumnos[notaAltaPosicion].isAsignaturasPendientes());
+			textoFinal +=("Alumno con nota mas alta "+"Alumno "+ notaAltaPosicion+": "+" nombre: " + alumnos[notaAltaPosicion].getNombre() +", edad: " + alumnos[notaAltaPosicion].getEdad() +", calificacion: " 
+					+ alumnos[notaAltaPosicion].getCalificacion() +", unidadesPendientes: " + alumnos[notaAltaPosicion].isAsignaturasPendientes()+"\n");
+			System.out.println("Alumno con nota mas baja "+"Alumno "+ notaBajaPosicion+": "+" nombre: " + alumnos[notaBajaPosicion].getNombre() +", edad: " + alumnos[notaBajaPosicion].getEdad() +", calificacion: " 
+					+ alumnos[notaBajaPosicion].getCalificacion() +", unidadesPendientes: " + alumnos[notaBajaPosicion].isAsignaturasPendientes());
+			textoFinal +=("Alumno con nota mas baja "+"Alumno "+ notaBajaPosicion+": "+" nombre: " + alumnos[notaBajaPosicion].getNombre() +", edad: " + alumnos[notaBajaPosicion].getEdad() +", calificacion: " 
+					+ alumnos[notaBajaPosicion].getCalificacion() +", unidadesPendientes: " + alumnos[notaBajaPosicion].isAsignaturasPendientes()+"\n");
+			media=media/alumnos.length;
+			notaMedia=notaMedia/alumnos.length;
+			System.out.println("Edad media:" + media);
+			textoFinal +=("Edad media:" + media+"\n");
+			System.out.println("Nota media:" + notaMedia);
+			textoFinal +=("Nota media:" + notaMedia+"\n");
+			Element rootElement2 = document2.createElement("mi_etiqueta_raiz");
+
+			rootElement2.setTextContent(textoFinal);
+
+			document2.appendChild(rootElement2);
+
+			writeXml(document2, output);
+
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			e.printStackTrace();
+		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		catch(TransformerException xmlException) 
-		{
-			xmlException.printStackTrace();
-		}
-		catch(IOException xmlException) 
-		{
-			xmlException.printStackTrace();
-		}
-		
-		
-	}
-	
-	public static void writeXml(Document document, OutputStream output) throws TransformerException
-	{
-		TransformerFactory transformerFactory= TransformerFactory.newInstance();
-		Transformer transformer= transformerFactory.newTransformer();
-		DOMSource xmlAsObject= new DOMSource(document);
-		StreamResult xmlAsFile=new StreamResult(output);
-		transformer.transform(xmlAsObject, xmlAsFile);
-		
 	}
 
+	private static void writeXml(Document document, OutputStream output) throws TransformerException {
+
+		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+
+		Transformer transformer = transformerFactory.newTransformer();
+
+		DOMSource xmlAsObject = new DOMSource(document);
+
+		StreamResult xmlAsFile = new StreamResult(output);
+
+		transformer.transform(xmlAsObject, xmlAsFile);
+	}
 }

@@ -1,0 +1,9 @@
+
+ì	java:S116
+"`Rename this field "AsignaturasPendientes" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.b c1bcbef222742baa974444aa2cd381d7h
+m
+java:S11352"2Complete the task associated to this TODO comment.8á‘∂ÅÊ1b 36364ec9aa2f0995d283c1c6a92d2e5ch
+î
+java:S12101"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.8Ÿó®ÇÊ1b 9c6977aa3ce5b94580e3f19b2777d663h
+l
+java:S1128"1Remove this unused import 'java.util.Comparator'.8Ÿó®ÇÊ1b 38fdd670819993062f2c3b883f68a333h

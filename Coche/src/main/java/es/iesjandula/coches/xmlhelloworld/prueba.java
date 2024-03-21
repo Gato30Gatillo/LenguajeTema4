@@ -43,6 +43,12 @@ public class prueba
 			
 			Alumno[] alumno=new Alumno[nodeListAlumnos.getLength()];
 			
+			int notaAlta=-1;
+			int notaAltaPosicion=0;
+			int notaBaja=11;
+			int notaBajaPosicion=0;
+			double media=0;
+			double notaMedia=0;
 			
 			
 			for(int i=0; i<nodeListAlumnos.getLength();i++) 
@@ -52,17 +58,39 @@ public class prueba
 				int edad = Integer.valueOf(nodeAlumno.getAttributes().getNamedItem("edad").getTextContent());
 				double calificacion= Double.valueOf(nodeAlumno.getElementsByTagName("calificacion").item(0).getTextContent());
 				boolean unidadesPendientes= Boolean.valueOf(nodeAlumno.getElementsByTagName("unidadesPendientes").item(0).getTextContent());
-				alumno[i].setNombre(nombre);
-				alumno[i].setEdad(edad);
-				alumno[i].setCalificacion(calificacion);
-				alumno[i].setAsignaturasPendientes(unidadesPendientes);
-			}
-			for(int i=0; i<alumno.length;i++) {
+				alumno[i]= new Alumno (nombre,edad,calificacion,unidadesPendientes);
+				if(alumno[i].getCalificacion()>notaAlta) 
+				{
+					notaAltaPosicion=i;
+				}
+				
+				if(alumno[i].getCalificacion()<notaBaja) 
+				{
+					notaBajaPosicion=i;
+				}
+				notaMedia+=calificacion;
+				media+=edad;
+				}
+			
+			
+			
+			for(int i=0; i<alumno.length;i++) 
+			{
+				if(!alumno[i].isAsignaturasPendientes()) 
+				{
 				System.out.println("Alumno "+ i+": "+" nombre: " + alumno[i].getNombre() +", edad: " + alumno[i].getEdad() +", calificacion: " 
 			+ alumno[i].getCalificacion() +", unidadesPendientes: " + alumno[i].isAsignaturasPendientes());
+				}
 				
-			
 			}
+			System.out.println("Alumno con nota mas alta "+"Alumno "+ notaAltaPosicion+": "+" nombre: " + alumno[notaAltaPosicion].getNombre() +", edad: " + alumno[notaAltaPosicion].getEdad() +", calificacion: " 
+					+ alumno[notaAltaPosicion].getCalificacion() +", unidadesPendientes: " + alumno[notaAltaPosicion].isAsignaturasPendientes());
+			System.out.println("Alumno con nota mas baja "+"Alumno "+ notaBajaPosicion+": "+" nombre: " + alumno[notaBajaPosicion].getNombre() +", edad: " + alumno[notaBajaPosicion].getEdad() +", calificacion: " 
+					+ alumno[notaBajaPosicion].getCalificacion() +", unidadesPendientes: " + alumno[notaBajaPosicion].isAsignaturasPendientes());
+			media=media/alumno.length;
+			notaMedia=notaMedia/alumno.length;
+			System.out.println("Edad media:" + media);
+			System.out.println("Nota media:" + notaMedia);
 			
 		} catch(ParserConfigurationException xmlException) 
 		{

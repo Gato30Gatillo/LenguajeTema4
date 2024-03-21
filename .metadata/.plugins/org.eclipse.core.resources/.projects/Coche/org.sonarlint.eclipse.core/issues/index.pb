@@ -1,6 +1,4 @@
 
-b
-2src/main/java/es/iesjandula/coches/hello_world.xml,9\2\922473da02e836374a8f9144151a78b17a8236f1
 ]
 -src/main/java/es/iesjandula/coches/Motor.java,1\c\1cbb266454bf8130d12f5e5f8e56d4b3e81fac9e
 ]
@@ -15,8 +13,6 @@ Isrc/main/java/es/iesjandula/coches/xmlhelloworld/ParserXmlHelloWorld.java,c\e\
 car.xml,5\2\524adfa0ca0348548b2a6991413ec9407a491837
 C
 hello_world_out.xml,a\4\a4f62f81bda2ef635478826da3bed4983e4b6d62
-Z
-*src/main/java/es/iesjandula/coches/car.xml,c\9\c9731cb6fb14b9aae52c3a9cfecc498526519000
 r
 Bsrc/main/java/es/iesjandula/coches/xmlhelloworld/ParserXmlCar.java,3\4\3451a762783ab365f4220812784fb6a70bb1929f
 |
@@ -25,3 +21,11 @@ t
 Dsrc/main/java/es/iesjandula/coches/xmlhelloworld/ParserXmlHomes.java,9\4\9414193de71b312f459cfde8f60265c62c2abeda
 u
 Esrc/main/java/es/iesjandula/coches/xmlhelloworld/ParserXmlHomes2.java,5\e\5e2c9be7445fb5d5286cf2883d5bc89529e75054
+^
+.src/main/java/es/iesjandula/coches/Alumno.java,0\a\0a99855c5160c5ee0db93b349b529369f4faddba
+B
+salida-alumnos.txt,8\1\81fc49a95c99cf11eff9e39fdec751e919af00ba
+l
+<src/main/java/es/iesjandula/coches/xmlhelloworld/prueba.java,b\7\b771a6305a59498991f7f9f0a4093ded39bd5d94
+y
+Isrc/main/java/es/iesjandula/coches/xmlhelloworld/ConvertAlumnosToXml.java,e\b\eb3f8a31f39613fe3f4d01e21254dce1c843e0dc

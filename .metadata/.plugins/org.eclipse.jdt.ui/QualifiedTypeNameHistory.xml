@@ -15,5 +15,7 @@
     <fullyQualifiedTypeName name="javax.xml.transform.TransformerException"/>
     <fullyQualifiedTypeName name="es.iesjandula.coches.Coche"/>
     <fullyQualifiedTypeName name="javax.xml.transform.OutputKeys"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="es.iesjandula.coches.Alumno"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

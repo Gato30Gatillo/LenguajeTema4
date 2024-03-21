@@ -1,7 +1,0 @@
-package es.iesjandula.coches;
-
-public class App {
-
-	Motor m1 = new Motor(100,"fas");
-	Coche c1 = new Coche("dqw","dwqdwq",m1,200);
-}

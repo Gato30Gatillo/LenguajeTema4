@@ -1,0 +1,33 @@
+
+g
+java:S2755"3Disable access to external entities in XML parsing.b 70a3a685aab42455b70a3ea947622a18h
+h
+java:S2755š"3Disable access to external entities in XML parsing.b 70a3a685aab42455b70a3ea947622a18h
+^	java:S106M"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+W
+java:S1643t"Use a StringBuilder instead.8ùãİæ1b a9c4b95bc7adab98d2d8fbf2af1527cfh
+‰
+java:S2095*"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.8ùãİæ1b 96cf1ae3644f3e31894f70bc036beddch
+
+java:S2147’"ECombine this catch with the one at line 144, which has the same body.8ùãİæ1b ee7b6a2e6bc84ad84d1b1ef20a5bb93bh
+t
+java:S2130G"9Use "Integer.parseInt" for this string-to-int conversion.8ùãİæ1b 4e1200345fc320e8bc88efd5bd5ea969h
+n
+java:S1135“"2Complete the task associated to this TODO comment.8ùãİæ1b 7070b9ee421ce52b0a94300bdc011420h
+Œ
+java:S1192M"QDefine a constant instead of duplicating this literal ", calificacion: " 6 times.8ÊÙúæ1b 3b5c8fd77b23cbbcd3ba0396c2b6e26bh
+„
+java:S1192M"IDefine a constant instead of duplicating this literal ", edad: " 6 times.8ÊÙúæ1b d15b633890f0337863f17635040a01c4h
+
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.8ÊÙúæ1b fad58de7366495db4650cfefac2fcd61h
+e	java:S106u"+Replace this use of System.out by a logger.8ÊÙúæ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+…
+java:S1192u"JDefine a constant instead of duplicating this literal " nombre: " 5 times.8ÔÙ„‚æ1b 16209a149ede4b6bf157b983e2a69bd9h
+’
+java:S1192v"WDefine a constant instead of duplicating this literal ", unidadesPendientes: " 5 times.8ÔÙ„‚æ1b bc179c6a3835ea30fcd3a93e5b94174fh
+ƒ
+java:S1192u"HDefine a constant instead of duplicating this literal "Alumno " 5 times.8ÔÙ„‚æ1b 5867c512365ad2b5c447e84af69efcb0h
+e	java:S106z"+Replace this use of System.out by a logger.8ÔÙ„‚æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+e	java:S106~"+Replace this use of System.out by a logger.8ÔÙ„‚æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+f	java:S106†"+Replace this use of System.out by a logger.8ÔÙ„‚æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+f	java:S106„"+Replace this use of System.out by a logger.8ÔÙ„‚æ1b bb1c3f2ea781263d3a2bb92b06a2061fh

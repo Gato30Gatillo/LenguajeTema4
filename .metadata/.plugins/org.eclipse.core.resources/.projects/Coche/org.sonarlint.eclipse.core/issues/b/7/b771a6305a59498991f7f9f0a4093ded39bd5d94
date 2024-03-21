@@ -1,0 +1,43 @@
+
+€	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.b c893bad68927b457dbed39460e6afd62h
+g
+java:S2755"3Disable access to external entities in XML parsing.b 70a3a685aab42455b70a3ea947622a18h
+m
+java:S2130:"9Use "Integer.parseInt" for this string-to-int conversion.b 4e1200345fc320e8bc88efd5bd5ea969h
+r
+java:S2130;">Use "Double.parseDouble" for this string-to-double conversion.b 50f9dcd5aa9b4101a70190aa6a87fbd6h
+u
+java:S2130<"AUse "Boolean.parseBoolean" for this string-to-boolean conversion.b 6949c0d8ba47a84cc2261ff5215aaa38h
+^	java:S106Q"+Replace this use of System.out by a logger.b bb1c3f2ea781263d3a2bb92b06a2061fh
+i
+java:S1128"5Remove this unused import 'java.io.FileOutputStream'.b 9a4be68a8620f037da31cf13e4df19f4h
+e
+java:S1128"1Remove this unused import 'java.io.OutputStream'.b 8762929d85344c8a0244e6cb5b95a43bh
+p
+java:S1128"<Remove this unused import 'javax.xml.transform.Transformer'.b b19f4062deea4c300caefa6f3b523a15h
+y
+java:S1128"ERemove this unused import 'javax.xml.transform.TransformerException'.b e7ec279be91c43d546a23d3efcbed3cch
+w
+java:S1128"CRemove this unused import 'javax.xml.transform.TransformerFactory'.b c3b310373731b45ac9a8dc2705b50f5bh
+r
+java:S1128">Remove this unused import 'javax.xml.transform.dom.DOMSource'.b e68e737fd79c8b2f62386ffbb490aaaeh
+x
+java:S1128"DRemove this unused import 'javax.xml.transform.stream.StreamResult'.b 6e08b3c108e2ec3884839645332d622bh
+Œ
+java:S1192Q"QDefine a constant instead of duplicating this literal ", calificacion: " 3 times.8·à¨æ1b 3b5c8fd77b23cbbcd3ba0396c2b6e26bh
+…
+java:S1192Q"JDefine a constant instead of duplicating this literal " nombre: " 3 times.8·à¨æ1b 16209a149ede4b6bf157b983e2a69bd9h
+’
+java:S1192R"WDefine a constant instead of duplicating this literal ", unidadesPendientes: " 3 times.8·à¨æ1b bc179c6a3835ea30fcd3a93e5b94174fh
+ƒ
+java:S1192Q"HDefine a constant instead of duplicating this literal "Alumno " 3 times.8·à¨æ1b 5867c512365ad2b5c447e84af69efcb0h
+„
+java:S1192Q"IDefine a constant instead of duplicating this literal ", edad: " 3 times.8·à¨æ1b d15b633890f0337863f17635040a01c4h
+e	java:S106X"+Replace this use of System.out by a logger.8·à¨æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+e	java:S106\"+Replace this use of System.out by a logger.8·à¨æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+
+java:S2147c"DCombine this catch with the one at line 95, which has the same body.8Œî®æ1b 9fd5406df99dfd41dae53b26f36c6995h
+e	java:S106V"+Replace this use of System.out by a logger.8Œî®æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+e	java:S106]"+Replace this use of System.out by a logger.8Œî®æ1b bb1c3f2ea781263d3a2bb92b06a2061fh
+
+java:S2147g"DCombine this catch with the one at line 99, which has the same body.8­£¹æ1b 8532ee58b6b11465a3ce38917c6d71cdh

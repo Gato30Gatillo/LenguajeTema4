@@ -1,62 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><alumnos>
-	<alumno edad="20" nombre="Fulanito">
-		<calificacion>8.5</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="21" nombre="Menganito">
-		<calificacion>7.4</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="19" nombre="Zutanito">
-		<calificacion>6.9</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-		<alumno edad="24" nombre="Alfredo">
-		<calificacion>8</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="23" nombre="Mengamind">
-		<calificacion>7</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="19" nombre="lori">
-		<calificacion>6</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-		<alumno edad="20" nombre="Pedro">
-		<calificacion>4.5</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="21" nombre="Clara">
-		<calificacion>7.6</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="19" nombre="Jaime">
-		<calificacion>3.9</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-		<alumno edad="20" nombre="Carlos">
-		<calificacion>2.5</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="21" nombre="Malfred">
-		<calificacion>1.4</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="19" nombre="Tito">
-		<calificacion>0.9</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-		<alumno edad="20" nombre="Paco">
-		<calificacion>4.9</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="21" nombre="Crok">
-		<calificacion>5.5</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="19" nombre="Pablo">
-		<calificacion>8.42</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-		<alumno edad="20" nombre="Vinicius">
-		<calificacion>5.56</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="21" nombre="Dioniso">
-		<calificacion>7.45</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="19" nombre="peoritario">
-		<calificacion>2.93</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-	<alumno edad="100" nombre="Teo">
-		<calificacion>10</calificacion><unidadesPendientes>true</unidadesPendientes>
-	</alumno>
-	<alumno edad="125" nombre="Jesus">
-		<calificacion>11</calificacion><unidadesPendientes>false</unidadesPendientes>
-	</alumno>
-</alumnos><alumnos/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mi_etiqueta_raiz>Alumno [nombre=Clara, edad=21, calificacion=7.6, AsignaturasPendientes=false]
+Alumno [nombre=Crok, edad=21, calificacion=5.5, AsignaturasPendientes=false]
+Alumno [nombre=Dioniso, edad=21, calificacion=7.45, AsignaturasPendientes=false]
+Alumno [nombre=Jaime, edad=19, calificacion=3.9, AsignaturasPendientes=false]
+Alumno [nombre=Jesus, edad=125, calificacion=11.0, AsignaturasPendientes=false]
+Alumno [nombre=Malfred, edad=21, calificacion=1.4, AsignaturasPendientes=false]
+Alumno [nombre=Mengamind, edad=23, calificacion=7.0, AsignaturasPendientes=false]
+Alumno [nombre=Menganito, edad=21, calificacion=7.4, AsignaturasPendientes=false]
+Alumno [nombre=Pablo, edad=19, calificacion=8.42, AsignaturasPendientes=false]
+Alumno [nombre=Tito, edad=19, calificacion=0.9, AsignaturasPendientes=false]
+Alumno [nombre=Zutanito, edad=19, calificacion=6.9, AsignaturasPendientes=false]
+Alumno [nombre=lori, edad=19, calificacion=6.0, AsignaturasPendientes=false]
+Alumno [nombre=peoritario, edad=19, calificacion=2.93, AsignaturasPendientes=false]
+Alumno con nota mas alta Alumno 7:  nombre: Jesus, edad: 125, calificacion: 11.0, unidadesPendientes: false
+Alumno con nota mas baja Alumno 15:  nombre: Tito, edad: 19, calificacion: 0.9, unidadesPendientes: false
+Edad media:29.55
+Nota media:6.018000000000001
+</mi_etiqueta_raiz>
